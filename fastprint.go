@@ -7,13 +7,14 @@ Benchmark
 	Here's the benchmark result on Intel(R) Core(TM) i5-3210M CPU @ 2.50GHz MacBook Mini with 16 GB 1600 MHz DDR3.
 	$ go test -bench . -benchmem
 
-	BenchmarkSprintS-4              200000000                9.39 ns/op            4 B/op          0 allocs/op
-	BenchmarkStringsJoin-4          100000000               19.8 ns/op             8 B/op          0 allocs/op
-	BenchmarkStringPlusLoop-4         300000            294329 ns/op          604019 B/op          1 allocs/op
-	BenchmarkBprintS-4              200000000                7.73 ns/op            4 B/op          0 allocs/op
-	BenchmarkSprintB-4              200000000               10.8 ns/op             4 B/op          0 allocs/op
-	BenchmarkBprintB-4              200000000                8.39 ns/op            4 B/op          0 allocs/op
-	BenchmarkBytesJoin-4            100000000               12.5 ns/op             4 B/op          0 allocs/op
+	BenchmarkSprintS-4      100000000               12.9 ns/op             4 B/op          0 allocs/op
+	BenchmarkFmtSprint-4    10000000               204 ns/op              57 B/op          1 allocs/op
+	BenchmarkStringsJoin-4  50000000                27.3 ns/op             8 B/op          0 allocs/op
+	BenchmarkBprintS-4      100000000               10.9 ns/op             4 B/op          0 allocs/op
+	BenchmarkSprintB-4      100000000               13.6 ns/op             4 B/op          0 allocs/op
+	BenchmarkFmtSprintB-4    2000000               795 ns/op             178 B/op          5 allocs/op
+	BenchmarkBprintB-4      100000000               12.6 ns/op             4 B/op          0 allocs/op
+	BenchmarkBytesJoin-4    100000000               18.9 ns/op             4 B/op          0 allocs/op
 
 
 Installation
