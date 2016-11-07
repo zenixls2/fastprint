@@ -4,18 +4,17 @@ With large quantity of []string or [][]byte concat, you may use strings.Join(arr
 
 Benchmark
 
-	Here's the benchmark result on Intel(R) Core(TM) i5-3210M CPU @ 2.50GHz MacBook Mini with 16 GB 1600 MHz DDR3.
-	$ go test -bench . -benchmem
-
-	BenchmarkSprintS-4      100000000               12.9 ns/op             4 B/op          0 allocs/op
-	BenchmarkFmtSprint-4    10000000               204 ns/op              57 B/op          1 allocs/op
-	BenchmarkStringsJoin-4  50000000                27.3 ns/op             8 B/op          0 allocs/op
-	BenchmarkBprintS-4      100000000               10.9 ns/op             4 B/op          0 allocs/op
-	BenchmarkSprintB-4      100000000               13.6 ns/op             4 B/op          0 allocs/op
-	BenchmarkFmtSprintB-4    2000000               795 ns/op             178 B/op          5 allocs/op
-	BenchmarkBprintB-4      100000000               12.6 ns/op             4 B/op          0 allocs/op
-	BenchmarkBytesJoin-4    100000000               18.9 ns/op             4 B/op          0 allocs/op
-
+    Here's the benchmark result on Intel(R) Core(TM) i5 CPU @ 2.70GHz MacBook Pro with 16 GB 1867 MHz DDR3.
+    golang version: 1.7.3
+    $ go test -bench . -benchmem
+    BenchmarkSprintS-4              200000000                7.93 ns/op            4 B/op          0 allocs/op
+    BenchmarkFmtSprint-4            10000000               133 ns/op              57 B/op          1 allocs/op
+    BenchmarkStringsJoin-4          100000000               15.3 ns/op             8 B/op          0 allocs/op
+    BenchmarkBprintS-4              300000000                7.81 ns/op            4 B/op          0 allocs/op
+    BenchmarkSprintB-4              200000000                8.95 ns/op            4 B/op          0 allocs/op
+    BenchmarkFmtSprintB-4            5000000               320 ns/op             171 B/op          1 allocs/op
+    BenchmarkBprintB-4              200000000                6.92 ns/op            4 B/op          0 allocs/op
+    BenchmarkBytesJoin-4            100000000               10.0 ns/op             4 B/op          0 allocs/op
 
 Installation
 
